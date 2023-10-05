@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Pet API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/pets": {
+      "get": {
+        "operationId": "getPets",
+        "responses": {
+          "200": {
+            "description": "list of pets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["cat", "dog"]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "type"]
+      }
+    }
+  }
+}
