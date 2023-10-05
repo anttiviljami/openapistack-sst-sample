@@ -1,6 +1,6 @@
 import { ApiHandler } from "sst/node/api";
 
-import { definition } from "@openapistack-sample-mock-app/core";
+import { definition } from "@openapistack-sst-sample/core";
 
 import { OpenAPIBackend, type Request } from "openapi-backend";
 import { type APIGatewayProxyEventV2 } from "aws-lambda";

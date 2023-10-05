@@ -1,5 +1,5 @@
 {
-  "name": "@openapistack-sample-mock-app/functions",
+  "name": "@openapistack-sst-sample/functions",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "openapi-backend": "^5.10.0",
-    "@openapistack-sample-mock-app/core": "*"
+    "@openapistack-sst-sample/core": "*"
   },
   "devDependencies": {
     "@types/node": "^20.8.2",

@@ -5,7 +5,9 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@openapistack-sample-mock-app/core/*": ["../core/src/*"]
+      "@openapistack-sst-sample/core/*": [
+        "../core/src/*"
+      ]
     }
   }
 }

@@ -4,7 +4,7 @@ import { OpenAPI } from "./stacks/OpenAPIStack";
 export default {
   config(_input) {
     return {
-      name: "openapistack-sample-mock-app",
+      name: "openapistack-sst-sample",
       region: "eu-west-1",
     };
   },
