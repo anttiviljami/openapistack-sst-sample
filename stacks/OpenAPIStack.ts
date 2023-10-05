@@ -5,9 +5,10 @@ export function OpenAPI({ stack }: StackContext) {
     routes: {
       "ANY /{proxy+}": "packages/functions/src/lambda.handler",
     },
+    customDomain: 'example.openapistack.co',
   });
 
   stack.addOutputs({
-    ApiEndpoint: api.url,
+    ApiEndpoint: api.customDomainUrl || api.url,
   });
 }
