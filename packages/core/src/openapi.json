@@ -8,9 +8,10 @@
     "/api/pets": {
       "get": {
         "operationId": "getPets",
+        "description": "Returns all pets from the system that the user has access to",
         "responses": {
           "200": {
-            "description": "list of pets",
+            "description": "List of Pets",
             "content": {
               "application/json": {
                 "schema": {
@@ -19,6 +20,33 @@
                     "$ref": "#/components/schemas/Pet"
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pets/{id}": {
+      "get": {
+        "operationId": "getPetById",
+        "description": "Returns a pet based on its unique ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The pet ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested Pet",
+            "content": {
+              "application/json": {
+                "$ref": "#/components/schemas/Pet"
               }
             }
           }
@@ -36,13 +64,19 @@
           },
           "type": {
             "type": "string",
-            "enum": ["cat", "dog"]
+            "enum": [
+              "cat",
+              "dog"
+            ]
           },
           "name": {
             "type": "string"
           }
         },
-        "required": ["id", "type"]
+        "required": [
+          "id",
+          "type"
+        ]
       }
     }
   }
