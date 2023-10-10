@@ -32,7 +32,8 @@ paths:
           description: The requested Pet
           content:
             application/json:
-              $ref: "#/components/schemas/Pet"
+              schema:
+                $ref: "#/components/schemas/Pet"
 components:
   schemas:
     Pet:
